@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+<div class="cabecalho">
+    <h1>CALCULADORA WEB</h1>
+</div>
+<div class="corpo">
+    <form action="/processar" method="post">
+        <div class="campo">
+            <label for="valor1">Valor 1: </label>
+            <input type="number" id="valor1" name="valor1" required>
+        </div>
+        <div class="campo">
+            <label for="valor2">Valor 2: </label>
+            <input type="number" id="valor2" name="valor2" required>
+        </div>
+        <input type="submit" name="operacao" value="Soma" class = "botao">
+        <input type="submit" name="operacao" value="Subtração" class = "botao">
+        <input type="submit" name="operacao" value="Multiplicação" class = "botao">
+        <input type="submit" name="operacao" value="Divisão" class = "botao">
+    </form>
+</div>
+
+<!-- Área onde vai aparecer o resultado (preenchido pelo Flask) -->
+<div class="resultado">
+    <h2>RESULTADO</h2>
+
+<!-- o {{resultado}} será substituido pelo texto que o python enviar -->
+    <p>{{resultado}}</p>
+</div>
+</body>
+</html>
